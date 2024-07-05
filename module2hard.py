@@ -1,12 +1,11 @@
 
 def your_password(n):
-    numbers = []
+    numbers = ''
     for i in range(1, (n + 1) // 2):
         j = i + 1
         while i + j <= n:
             if n % (i + j) == 0:
-                m = (i, j)
-                numbers.append(m)
+                numbers += str(i) + str(j)
             j += 1
     return numbers
 
